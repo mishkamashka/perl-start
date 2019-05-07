@@ -1,0 +1,4 @@
+#! /usr/bin/perl
+chomp ($string = <STDIN>);
+$n = <STDIN>;
+print $string x $n . "\n";

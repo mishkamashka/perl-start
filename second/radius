@@ -1,6 +1,6 @@
 $radius = <STDIN>;
-if (defined $radius) {
+if ($radius >= 0) {
 	print $radius * 2 * 3.141592654 . "\n";
 } else {
-	print "No input\n";
+	print "0\n";
 }

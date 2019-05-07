@@ -1,0 +1,5 @@
+#! /usr/bin/perl
+chomp (@array = <STDIN>);
+@array = reverse @array;
+print "@array\n";
+
