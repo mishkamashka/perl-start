@@ -1,0 +1,6 @@
+$radius = <STDIN>;
+if (defined $radius) {
+	print $radius * 2 * 3.141592654 . "\n";
+} else {
+	print "No input\n";
+}
