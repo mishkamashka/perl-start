@@ -1,0 +1,31 @@
+#! /usr/bin/perl
+$s = "abc123";
+if ($s =~ /./) {
+	print "\$s =~ /./ - true\n";
+} else {
+	print "\$ =~ /./ - false\n";
+}
+
+if ($s =~ /[A-Z]*^/) {
+	print "\$s =~ /[A-Z]*^/ - true\n";
+} else {
+	print "\$s =~ /[A-Z]*^/ - false\n";
+}
+
+if ($s =~ /(\d)2(\1)/) {
+	print "\$s =~ /(\\d)2(\\1)/ - true\n";
+} else {
+	print "\$ =~ /(\\d)2(\\1)/ - false\n";
+}
+
+if ($s =~ /abc$/ ) {
+        print "\$s =~ /abc\$/ - true\n";
+} else {
+        print "\$ =~ /abc\$/ - false\n";
+}
+
+if ($s =~ /1234?/) {
+        print "\$s =~ /1234?/ - true\n";
+} else {
+        print "\$ =~ /1234?/ - false\n";
+}

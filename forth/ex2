@@ -1,0 +1,14 @@
+#! /usr/bin/perl
+
+sub total {
+	my @numbers = @_;
+	my $sum = 0;
+	foreach $number (@numbers) {
+		$sum += $number;
+	}
+	$sum;
+}
+
+@fred = 1..1000;
+$fred_total = total(@fred);
+print "The total of \@fred, which is 1\.\.1000, is $fred_total.\n";

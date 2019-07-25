@@ -1,0 +1,13 @@
+#! /usr/bin/perl
+if ("12.45" =~ /\d+(\.\d+)?/) {
+	print "yes\n";
+} else {
+	print "no\n";
+}
+
+if ("fifth" =~ /([a-zA-Z])[eyuioa]\1/) {
+        print "yes\n";
+} else {
+        print "no\n";
+}
+

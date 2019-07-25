@@ -1,0 +1,17 @@
+#! /usr/bin/perl
+use feature 'state';
+sub greet {
+	state $previous = "";
+	my $name = @_[0];
+	print "Hi $name!";
+	if ($previous eq "") {
+		print " You're the first one here!\n";
+	} else {
+		print " $previous is also here!\n";
+	}
+	$previous = $name;
+}
+
+greet( "Fred" );
+greet( "Barney" );
+greet( "Mary" );

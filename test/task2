@@ -1,0 +1,22 @@
+#! /usr/bin/perl
+$var = "abc123abc";
+$s = $var;
+$s =~ s/abc/def/;
+print "\$s =~ s/abc/def/ - \$s = $s\n";
+
+$s = $var;
+$s =~ s/(?<=\d)[a-z]+/X/g;
+print "\$s =~ s/(?<=\\d)[a-z]+/X/g - \$s = $s\n";
+
+$s = $var;
+$s =~ s/B/W/i;
+print "\$s =~ s/B/W/i - \$s = $s\n";
+
+$s = $var;
+$s =~ s/(.)\d.*\1/d/;
+print "\$s =~ s/(.)\\d.*\\1/d/ - \$s = $s\n";
+
+$s = $var;
+$s =~ s/(\d+)/$1*2/e;
+print "\$s =~ s/(\\d+)/\$1*2/e - \$s = $s\n";
+
