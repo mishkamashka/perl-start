@@ -1,0 +1,29 @@
+#! /usr/bin/perl
+use feature 'state';
+sub greet {
+	state @previous;
+	my $name = @_[0];
+	print "Hi $name! ";
+	if (@previous == 0) {
+		print " You're the first one here!\n";
+	} else {
+		print "I've seen:";
+		my $k = @previous;
+		my $counter = 0;
+		foreach (@previous) {
+			if ($counter == $k - 1) {
+				print " $_!\n";
+			} else {
+				print " $_,";
+			}
+			$counter++;
+		}
+	}
+	push @previous, $name;
+}
+
+greet( "Fred" );
+greet( "Barney" );
+greet( "Mary" );
+greet( "Jake" );
+greet( "Larry" );
